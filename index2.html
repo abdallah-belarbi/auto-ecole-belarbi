@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-école Belarbi Abdellah | Mostaganem Mont Plaisir</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-black: #09070f;
+            --bg-dark-1: #0d0918;
+            --bg-card: #140e26;
+            --bg-card-alt: #18112e;
+            --primary-purple: #9333ea;
+            --primary-violet: #a855f7;
+            --border-purple: rgba(168, 85, 247, 0.25);
+            --accent-green: #25d366;
+            --text-white: #ffffff;
+            --text-slate: #cbd5e1;
+            --text-muted: #94a3b8;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text-slate);
+            background-color: var(--bg-black);
+            line-height: 1.6;
+            padding-bottom: 75px;
+            overflow-x: hidden;
+        }
+
+        @media (min-width: 768px) {
+            body { padding-bottom: 0; }
+        }
+
+        .ambient-glow {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1000px;
+            height: 420px;
+            background: radial-gradient(circle, rgba(147, 51, 234, 0.18) 0%, rgba(9, 7, 15, 0) 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(12, 9, 21, 0.95);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-purple);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+        }
+
+        .logo-svg-wrap {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-svg-wrap svg {
+            height: 56px;
+            width: auto;
+            max-width: 320px;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .btn-header {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #7e22ce, #9333ea);
+            color: var(--text-white);
+            padding: 0.6rem 1.25rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            box-shadow: 0 2px 12px rgba(147, 51, 234, 0.35);
+            border: 1px solid rgba(192, 132, 252, 0.3);
+        }
+
+        .btn-header:hover {
+            background: linear-gradient(135deg, #9333ea, #a855f7);
+            box-shadow: 0 4px 18px rgba(168, 85, 247, 0.5);
+            transform: translateY(-1px);
+        }
+
+        .btn-header-wa {
+            display: none;
+            align-items: center;
+            gap: 8px;
+            background: #25d366;
+            color: #ffffff;
+            padding: 0.6rem 1.1rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.85rem;
+            transition: var(--transition);
+        }
+
+        @media (min-width: 640px) {
+            .btn-header-wa { display: inline-flex; }
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            padding: 4rem 1.5rem 5rem;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .hero-container {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .badge-slogan {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(147, 51, 234, 0.18);
+            color: #d8b4fe;
+            padding: 0.45rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            line-height: 1.15;
+            color: var(--text-white);
+            font-weight: 900;
+            margin-bottom: 1.2rem;
+        }
+
+        @media (min-width: 640px) {
+            .hero h1 { font-size: 3.6rem; }
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, #c084fc, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-slate);
+            margin-bottom: 2.2rem;
+            line-height: 1.6;
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* 3 Piliers réels */
+        .real-pillars {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin: 0 auto 2.5rem;
+            max-width: 780px;
+        }
+
+        @media (min-width: 550px) {
+            .real-pillars { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        .pillar-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-purple);
+            border-radius: 12px;
+            padding: 1rem 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-align: left;
+        }
+
+        .pillar-card i {
+            color: var(--primary-violet);
+            font-size: 1.25rem;
+            background: rgba(147, 51, 234, 0.2);
+            padding: 10px;
+            border-radius: 10px;
+            flex-shrink: 0;
+        }
+
+        .pillar-card h5 {
+            color: #ffffff;
+            font-size: 0.9rem;
+            font-weight: 800;
+        }
+
+        .pillar-card span {
+            font-size: 0.75rem;
+            color: #d8b4fe;
+            display: block;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 0.95rem 1.9rem;
+            font-size: 1rem;
+            font-weight: 800;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-purple {
+            background: linear-gradient(135deg, #9333ea, #7e22ce);
+            color: #ffffff;
+            box-shadow: 0 4px 20px rgba(147, 51, 234, 0.45);
+            border: 1px solid rgba(216, 180, 254, 0.3);
+        }
+
+        .btn-purple:hover {
+            background: linear-gradient(135deg, #a855f7, #9333ea);
+            box-shadow: 0 6px 25px rgba(168, 85, 247, 0.6);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #19122d;
+            color: #e2e8f0;
+            border: 1px solid var(--border-purple);
+        }
+
+        .btn-secondary:hover {
+            background: #23193e;
+            color: #ffffff;
+        }
+
+        /* Sections */
+        .section {
+            padding: 4.5rem 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .bg-dark-alt {
+            background-color: var(--bg-dark-1);
+            border-top: 1px solid var(--border-purple);
+            border-bottom: 1px solid var(--border-purple);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title .kicker {
+            color: var(--primary-violet);
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            display: inline-block;
+            margin-bottom: 6px;
+        }
+
+        .section-title h2 {
+            font-size: 2.1rem;
+            color: var(--text-white);
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+        }
+
+        .section-title p {
+            color: var(--text-slate);
+            font-size: 0.95rem;
+        }
+
+        /* Barre cliquable des Documents */
+        .docs-bar-wrap {
+            max-width: 720px;
+            margin: 0 auto;
+            background: #130d25;
+            border: 1px solid rgba(168, 85, 247, 0.4);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(76, 29, 149, 0.25);
+        }
+
+        .docs-bar-btn {
+            width: 100%;
+            background: transparent;
+            border: none;
+            padding: 1.15rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            cursor: pointer;
+            text-align: left;
+            color: var(--text-white);
+            font-family: inherit;
+            transition: var(--transition);
+        }
+
+        .docs-bar-btn:hover {
+            background: #1a1233;
+        }
+
+        .docs-bar-left {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .docs-bar-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #9333ea, #6b21a8);
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+            box-shadow: 0 0 15px rgba(168, 85, 247, 0.35);
+        }
+
+        .docs-bar-title {
+            font-size: 1rem;
+            font-weight: 800;
+            color: #ffffff;
+        }
+
+        .docs-bar-sub {
+            font-size: 0.8rem;
+            color: #d8b4fe;
+        }
+
+        .docs-bar-chevron {
+            color: #d8b4fe;
+            font-size: 1rem;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .docs-bar-wrap.open .docs-bar-chevron {
+            transform: rotate(180deg);
+        }
+
+        .docs-bar-panel {
+            display: none;
+            padding: 0.5rem 1.5rem 1.25rem;
+            border-top: 1px solid rgba(168, 85, 247, 0.25);
+            background: #0e0a1b;
+        }
+
+        .docs-bar-wrap.open .docs-bar-panel {
+            display: block;
+        }
+
+        .docs-bar-list {
+            list-style: none;
+        }
+
+        .docs-bar-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(168, 85, 247, 0.15);
+            color: #e2e8f0;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .docs-bar-list li:last-child {
+            border-bottom: none;
+        }
+
+        .docs-bar-list li i {
+            color: var(--primary-violet);
+            font-size: 0.95rem;
+        }
+
+        /* Contact & Formulaire */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+        }
+
+        @media (min-width: 900px) {
+            .contact-container { grid-template-columns: 1fr 1.2fr; }
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .info-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-purple);
+            border-radius: 14px;
+            padding: 1.2rem 1.4rem;
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .info-card i {
+            font-size: 1.25rem;
+            color: var(--primary-violet);
+            background: rgba(147, 51, 234, 0.2);
+            padding: 12px;
+            border-radius: 12px;
+        }
+
+        .info-card h4 {
+            font-size: 1.05rem;
+            color: var(--text-white);
+            margin-bottom: 4px;
+        }
+
+        .info-card p, .info-card a {
+            color: var(--text-slate);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .contact-form {
+            background: var(--bg-card);
+            padding: 2.2rem;
+            border-radius: 18px;
+            border: 1px solid var(--border-purple);
+            box-shadow: 0 8px 30px rgba(76, 29, 149, 0.25);
+        }
+
+        .contact-form h3 {
+            color: var(--text-white);
+            margin-bottom: 1.2rem;
+            font-size: 1.35rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-slate);
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="tel"],
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            background: #0f0b1a;
+            border: 1px solid var(--border-purple);
+            border-radius: 10px;
+            color: #ffffff;
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-violet);
+            box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.25);
+        }
+
+        /* Barre cliquable Documents dans le formulaire */
+        .docs-checklist-box {
+            background: #100b1e;
+            border: 1px solid var(--border-purple);
+            border-radius: 12px;
+            margin-bottom: 1.1rem;
+            overflow: hidden;
+        }
+
+        .form-docs-toggle {
+            width: 100%;
+            background: transparent;
+            border: none;
+            padding: 0.85rem 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #d8b4fe;
+            transition: var(--transition);
+        }
+
+        .form-docs-toggle:hover {
+            background: #18102d;
+        }
+
+        .form-docs-toggle .chevron {
+            transition: transform 0.3s ease;
+        }
+
+        .docs-checklist-box.open .form-docs-toggle .chevron {
+            transform: rotate(180deg);
+        }
+
+        .form-docs-body {
+            display: none;
+            padding: 0.75rem 1rem 1rem;
+            border-top: 1px solid rgba(168, 85, 247, 0.2);
+        }
+
+        .docs-checklist-box.open .form-docs-body {
+            display: block;
+        }
+
+        .docs-checklist-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .docs-toggle-all {
+            background: none;
+            border: none;
+            color: var(--primary-violet);
+            font-size: 0.8rem;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .docs-checkboxes {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.55rem;
+        }
+
+        @media (min-width: 550px) {
+            .docs-checkboxes { grid-template-columns: 1fr 1fr; }
+        }
+
+        .doc-check-label {
+            display: flex !important;
+            align-items: center;
+            gap: 10px;
+            padding: 0.6rem 0.75rem;
+            background: #161029;
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 8px;
+            font-size: 0.85rem !important;
+            font-weight: 500 !important;
+            margin-bottom: 0 !important;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .doc-check-label:hover {
+            border-color: var(--primary-violet);
+        }
+
+        .doc-check-label input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            accent-color: #9333ea;
+            cursor: pointer;
+        }
+
+        .map-wrapper {
+            margin-top: 3rem;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border-purple);
+            height: 320px;
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        footer {
+            background: #06040a;
+            color: var(--text-muted);
+            padding: 2.5rem 1.5rem;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(147, 51, 234, 0.15);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-content {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+            }
+        }
+
+        .mobile-quick-action {
+            display: flex;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(12, 9, 21, 0.95);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid var(--border-purple);
+            z-index: 999;
+            padding: 10px 12px;
+            gap: 10px;
+        }
+
+        .mobile-quick-action a {
+            flex: 1;
+            padding: 11px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 0.95rem;
+        }
+
+        @media (min-width: 768px) {
+            .mobile-quick-action { display: none; }
+        }
+
+        /* Vidéo d'introduction (Voiture + Nom Auto-école) */
+        .intro-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            background: #05030a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            transition: opacity 0.45s ease;
+        }
+
+        .intro-overlay.hidden-fade {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .intro-overlay.removed {
+            display: none;
+        }
+
+        .intro-player {
+            width: 100%;
+            max-width: 900px;
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid rgba(168, 85, 247, 0.45);
+            background: #090612;
+            box-shadow: 0 25px 70px rgba(88, 28, 135, 0.45);
+        }
+
+        .intro-topbar {
+            padding: 0.75rem 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #0d081a;
+            border-bottom: 1px solid rgba(147, 51, 234, 0.25);
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .intro-timer {
+            font-variant-numeric: tabular-nums;
+            color: #d8b4fe;
+            font-size: 0.8rem;
+        }
+
+        .intro-stage {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            width: 100%;
+            background: #05030a;
+        }
+
+        #introCanvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .intro-progress-track {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: rgba(88, 28, 135, 0.5);
+        }
+
+        .intro-progress-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #a855f7, #e879f9);
+            transition: width 0.08s linear;
+        }
+
+        .intro-controls {
+            padding: 0.9rem 1.25rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            background: #0d081a;
+            border-top: 1px solid rgba(147, 51, 234, 0.25);
+        }
+
+        .intro-ctrl-group {
+            display: flex;
+            gap: 8px;
+        }
+
+        .intro-ctrl-btn {
+            background: #1a1130;
+            border: 1px solid rgba(168, 85, 247, 0.35);
+            color: #e9d5ff;
+            padding: 0.55rem 0.9rem;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: inherit;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .intro-ctrl-btn:hover {
+            background: #251845;
+        }
+
+        .hero-socials {
+            margin-top: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        .social-link-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0.55rem 0.95rem;
+            border-radius: 10px;
+            background: #130d24;
+            border: 1px solid rgba(168, 85, 247, 0.35);
+            color: #e2e8f0;
+            text-decoration: none;
+            font-size: 0.82rem;
+            transition: var(--transition);
+        }
+
+        .social-link-btn:hover {
+            border-color: var(--primary-violet);
+            background: #1b1333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ambient-glow"></div>
+
+    <!-- Vidéo d'introduction Voiture + Nom Auto-école -->
+    <div class="intro-overlay" id="introOverlay" role="dialog" aria-modal="true" aria-label="Vidéo d'introduction Auto-école Belarbi Abdellah">
+        <div class="intro-player">
+            <div class="intro-topbar">
+                <span><i class="fa-solid fa-film" style="color:#a855f7; margin-right:8px;"></i>Auto école Belarbi Abdellah</span>
+                <span class="intro-timer" id="introTimer">00:00 / 00:06</span>
+            </div>
+            <div class="intro-stage">
+                <canvas id="introCanvas"></canvas>
+                <div class="intro-progress-track">
+                    <div class="intro-progress-fill" id="introProgressFill"></div>
+                </div>
+            </div>
+            <div class="intro-controls">
+                <div class="intro-ctrl-group">
+                    <button type="button" class="intro-ctrl-btn" onclick="toggleIntroPlay()" id="introPlayBtn">
+                        <i class="fa-solid fa-pause"></i> Pause
+                    </button>
+                    <button type="button" class="intro-ctrl-btn" onclick="replayIntro()">
+                        <i class="fa-solid fa-rotate-left"></i> Revoir
+                    </button>
+                </div>
+                <button type="button" class="btn btn-purple" style="padding:0.65rem 1.25rem; font-size:0.88rem;" onclick="enterPlatform()">
+                    Découvrir la plateforme <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+            <a href="#" class="logo-svg-wrap">
+                <svg viewBox="0 0 380 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#c084fc" />
+                            <stop offset="50%" stop-color="#a855f7" />
+                            <stop offset="100%" stop-color="#7e22ce" />
+                        </linearGradient>
+                        <linearGradient id="whiteSilver" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#ffffff" />
+                            <stop offset="100%" stop-color="#cbd5e1" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M 12 36 C 45 28, 85 18, 140 10 C 190 4, 235 6, 280 18 C 300 24, 320 28, 335 34 C 315 32, 290 28, 260 22 C 220 14, 180 12, 135 17 C 80 23, 40 32, 12 36 Z" fill="url(#purpleGrad)" />
+                    <g transform="translate(332, 24)">
+                        <path d="M -22 14 A 24 24 0 1 1 20 14" stroke="url(#purpleGrad)" stroke-width="3.5" stroke-linecap="round" fill="none" />
+                        <line x1="-16" y1="4" x2="-12" y2="4" stroke="#e879f9" stroke-width="2" />
+                        <line x1="-12" y1="-8" x2="-8" y2="-6" stroke="#c084fc" stroke-width="2" />
+                        <line x1="0" y1="-14" x2="0" y2="-9" stroke="#ffffff" stroke-width="2.5" />
+                        <line x1="12" y1="-8" x2="8" y2="-6" stroke="#fb7185" stroke-width="2" />
+                        <line x1="16" y1="4" x2="12" y2="4" stroke="#f43f5e" stroke-width="2" />
+                        <line x1="0" y1="4" x2="13" y2="-10" stroke="#f43f5e" stroke-width="3" stroke-linecap="round" />
+                        <circle cx="0" cy="4" r="3.5" fill="#ffffff" />
+                    </g>
+                    <text x="18" y="32" fill="#d8b4fe" font-size="17" font-weight="700" font-style="italic">Auto école</text>
+                    <text x="16" y="62" fill="url(#whiteSilver)" font-size="30" font-weight="900" font-style="italic" letter-spacing="0.8">BELARBI ABDELLAH</text>
+                    <text x="20" y="82" fill="#c084fc" font-size="14" font-weight="600" font-style="italic">Votre permis, notre priorité</text>
+                </svg>
+            </a>
+
+            <div class="header-actions">
+                <a href="https://wa.me/213790697421?text=Bonjour%20Auto-école%20Belarbi%20Abdellah,%20je%20souhaite%20des%20informations" target="_blank" class="btn-header-wa">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="tel:0790697421" class="btn-header">
+                    <i class="fa-solid fa-phone"></i> 07 90 69 74 21
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero / Présentation -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="badge-slogan">
+                <i class="fa-solid fa-sparkles"></i> Apprendre aujourd'hui... Conduire demain
+            </div>
+            <h1>Votre permis, <br><span>notre priorité</span></h1>
+            <p><strong>Notre mission : Vous accompagner vers la réussite.</strong> Formation complète au Permis B à Mostaganem (Rue Djebli Mohamed, Mont Plaisir) avec suivi sérieux et pédagogie personnalisée.</p>
+
+            <div class="real-pillars">
+                <div class="pillar-card">
+                    <i class="fa-solid fa-dharmachakra"></i>
+                    <div>
+                        <h5>Apprentissage</h5>
+                        <span>Professionnel</span>
+                    </div>
+                </div>
+                <div class="pillar-card">
+                    <i class="fa-solid fa-user-check"></i>
+                    <div>
+                        <h5>Accompagnement</h5>
+                        <span>Personnalisé</span>
+                    </div>
+                </div>
+                <div class="pillar-card">
+                    <i class="fa-solid fa-trophy"></i>
+                    <div>
+                        <h5>Taux de réussite</h5>
+                        <span>Élevé</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="https://wa.me/213790697421?text=Bonjour%20Auto-école%20Belarbi%20Abdellah,%20je%20souhaite%20m'inscrire%20dès%20maintenant" target="_blank" class="btn btn-purple">
+                    <i class="fa-brands fa-whatsapp"></i> Inscrivez-vous dès maintenant !
+                </a>
+                <a href="tel:0790697421" class="btn btn-secondary">
+                    <i class="fa-solid fa-phone"></i> 07 90 69 74 21
+                </a>
+                <button type="button" onclick="openIntroAgain()" class="btn btn-secondary">
+                    <i class="fa-solid fa-play"></i> Vidéo d'intro
+                </button>
+            </div>
+
+            <div class="hero-socials">
+                <a href="https://www.tiktok.com/search?q=Auto%20ecole%20Abdallah%20Belarbi" target="_blank" rel="noopener noreferrer" class="social-link-btn">
+                    <i class="fa-brands fa-tiktok" style="color:#ffffff;"></i>
+                    <span>TikTok : <strong style="color:#ffffff;">Auto école Abdallah Belarbi</strong></span>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="social-link-btn">
+                    <i class="fa-brands fa-instagram" style="color:#f472b6;"></i>
+                    <span>Instagram : <strong style="color:#ffffff;">Auto école Abdallah Belarbi</strong></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Présentation -->
+    <section class="section bg-dark-alt">
+        <div class="container">
+            <div class="section-title">
+                <span class="kicker">Sur le terrain</span>
+                <h2>Votre réussite en toute confiance</h2>
+                <p>Un moniteur d'expérience pour vous apprendre la route sans stress</p>
+            </div>
+
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:1.5rem;">
+                <div style="background:var(--bg-card); border:1px solid var(--border-purple); border-radius:14px; padding:1.5rem;">
+                    <i class="fa-solid fa-graduation-cap" style="font-size:1.5rem; color:var(--primary-violet); margin-bottom:12px; display:inline-block;"></i>
+                    <h4 style="color:#ffffff; margin-bottom:6px;">Formation Rigoureuse</h4>
+                    <p style="font-size:0.9rem; color:var(--text-slate);">Apprentissage complet du code de la route et maîtrise technique des trajectoires.</p>
+                </div>
+                <div style="background:var(--bg-card); border:1px solid var(--border-purple); border-radius:14px; padding:1.5rem;">
+                    <i class="fa-solid fa-user-shield" style="font-size:1.5rem; color:var(--primary-violet); margin-bottom:12px; display:inline-block;"></i>
+                    <h4 style="color:#ffffff; margin-bottom:6px;">Moniteur Pédagogue</h4>
+                    <p style="font-size:0.9rem; color:var(--text-slate);">De la première leçon jusqu'au passage officiel de l'examen final avec calme et patience.</p>
+                </div>
+                <div style="background:var(--bg-card); border:1px solid var(--border-purple); border-radius:14px; padding:1.5rem;">
+                    <i class="fa-solid fa-clock" style="font-size:1.5rem; color:var(--primary-violet); margin-bottom:12px; display:inline-block;"></i>
+                    <h4 style="color:#ffffff; margin-bottom:6px;">Planning Modulable</h4>
+                    <p style="font-size:0.9rem; color:var(--text-slate);">Créneaux aménagés du samedi au jeudi selon vos disponibilités.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Barre cliquable des Documents à fournir -->
+    <section class="section">
+        <div class="container">
+            <div class="docs-bar-wrap" id="docsBarWrap">
+                <button type="button" class="docs-bar-btn" onclick="toggleDocsBar()" aria-expanded="false" id="docsBarBtn">
+                    <div class="docs-bar-left">
+                        <div class="docs-bar-icon">
+                            <i class="fa-solid fa-file-circle-check"></i>
+                        </div>
+                        <div>
+                            <div class="docs-bar-title">Documents du dossier d'inscription</div>
+                            <div class="docs-bar-sub">Cliquez ici pour voir la liste des 6 pièces à ramener</div>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-chevron-down docs-bar-chevron"></i>
+                </button>
+
+                <div class="docs-bar-panel">
+                    <ul class="docs-bar-list">
+                        <li><i class="fa-solid fa-circle-check"></i><span>Certificat médical</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i><span>Extrait de naissance</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i><span>Attestation de résidence</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i><span>Copie de la pièce d'identité</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i><span>6 photos</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i><span>4 timbres de 300 DA</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Inscription -->
+    <section class="section bg-dark-alt">
+        <div class="container">
+            <div class="section-title">
+                <span class="kicker">Contact</span>
+                <h2>Rejoignez notre Auto-école</h2>
+                <p>Bureau situé à Mont Plaisir, Mostaganem</p>
+            </div>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h4>Adresse</h4>
+                            <p>Rue Djebli Mohamed, Mont Plaisir<br>Mostaganem, Algérie</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h4>Téléphone</h4>
+                            <p><a href="tel:0790697421" style="font-weight:700; color:var(--primary-violet); font-size:1.1rem;">07 90 69 74 21</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp Direct</h4>
+                            <p><a href="https://wa.me/213790697421?text=Bonjour%20Auto-école%20Belarbi%20Abdellah,%20je%20souhaite%20m'inscrire" target="_blank" style="color:var(--accent-green); font-weight:700;">Envoyer un message WhatsApp →</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fa-solid fa-hashtag"></i>
+                        <div>
+                            <h4>Réseaux Sociaux</h4>
+                            <p style="font-size:0.88rem; color:var(--text-slate); line-height:1.7;">
+                                <a href="https://www.tiktok.com/search?q=Auto%20ecole%20Abdallah%20Belarbi" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok" style="margin-right:6px;"></i>TikTok : <strong>Auto école Abdallah Belarbi</strong></a><br>
+                                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" style="color:#f472b6; margin-right:6px;"></i>Instagram : <strong>Auto école Abdallah Belarbi</strong></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Demande d'Inscription & Dossier</h3>
+                    <div id="formConfirmBanner" style="display:none; padding:0.85rem 1rem; margin-bottom:1rem; border-radius:10px; background:rgba(88,28,135,0.45); border:1px solid rgba(168,85,247,0.5); font-size:0.82rem; color:#e9d5ff; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap;">
+                        <span><i class="fa-solid fa-circle-check" style="color:#c084fc; margin-right:6px;"></i>Demande prête !</span>
+                        <a id="formConfirmWaLink" href="#" target="_blank" rel="noopener noreferrer" style="background:#25d366; color:#ffffff; padding:0.4rem 0.75rem; border-radius:8px; text-decoration:none; font-weight:700;">Ouvrir WhatsApp</a>
+                    </div>
+                    <form onsubmit="handleFormSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">Nom et Prénom</label>
+                            <input type="text" id="name" required placeholder="Ex: Mohamed Benali">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Numéro de Téléphone</label>
+                            <input type="tel" id="phone" required placeholder="Ex: 07 90 69 74 21">
+                        </div>
+                        <div class="form-group">
+                            <label for="formation">Formule souhaitée</label>
+                            <select id="formation">
+                                <option value="Permis B (Formation Complète)">Permis B (Formation Complète : Code + Conduite)</option>
+                                <option value="Code seul">Code de la route uniquement</option>
+                                <option value="Perfectionnement">Perfectionnement / Heures de conduite</option>
+                            </select>
+                        </div>
+
+                        <!-- Barre cliquable pour les documents du dossier -->
+                        <div class="docs-checklist-box" id="formDocsBox">
+                            <button type="button" class="form-docs-toggle" onclick="toggleFormDocs()" aria-expanded="false" id="formDocsBtn">
+                                <span><i class="fa-solid fa-file-circle-check" style="margin-right:6px; color:var(--primary-violet);"></i>Documents du dossier (<span id="docsCount">0</span>/6 sélectionnés)</span>
+                                <i class="fa-solid fa-chevron-down chevron"></i>
+                            </button>
+                            <div class="form-docs-body">
+                                <div class="docs-checklist-header">
+                                    <span>Cochez les pièces déjà prêtes :</span>
+                                    <button type="button" class="docs-toggle-all" onclick="toggleAllDocs()">Tout cocher</button>
+                                </div>
+                                <div class="docs-checkboxes">
+                                    <label class="doc-check-label">
+                                        <input type="checkbox" name="dossierDoc" value="Certificat médical" onchange="updateDocsCount()">
+                                        <span>Certificat médical</span>
+                                    </label>
+                                    <label class="doc-check-label">
+                                        <input type="checkbox" name="dossierDoc" value="Extrait de naissance" onchange="updateDocsCount()">
+                                        <span>Extrait de naissance</span>
+                                    </label>
+                                    <label class="doc-check-label">
+                                        <input type="checkbox" name="dossierDoc" value="Attestation de résidence" onchange="updateDocsCount()">
+                                        <span>Attestation de résidence</span>
+                                    </label>
+                                    <label class="doc-check-label">
+                                        <input type="checkbox" name="dossierDoc" value="Copie de la pièce d'identité" onchange="updateDocsCount()">
+                                        <span>Copie de la pièce d'identité</span>
+                                    </label>
+                                    <label class="doc-check-label">
+                                        <input type="checkbox" name="dossierDoc" value="6 photos" onchange="updateDocsCount()">
+                                        <span>6 photos</span>
+                                    </label>
+                                    <label class="doc-check-label">
+                                        <input type="checkbox" name="dossierDoc" value="4 timbres de 300 DA" onchange="updateDocsCount()">
+                                        <span>4 timbres de 300 DA</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message (facultatif)</label>
+                            <textarea id="message" rows="2" placeholder="Vos disponibilités ou questions..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-purple" style="width: 100%;">
+                            <i class="fa-brands fa-whatsapp"></i> Envoyer ma demande via WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="map-wrapper">
+                <iframe 
+                    title="Emplacement Auto-école Mostaganem Mont Plaisir"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12975.922119107954!2d0.08988585!3d35.9311545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1281ffe1a55fbc4d%3A0x6b77ee47596541f4!2sMostaganem!5e0!3m2!1sfr!2sdz!4v1700000000000" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p><strong>Auto école BELARBI ABDELLAH</strong> · Votre permis, notre priorité</p>
+            <p>
+                <a href="https://www.tiktok.com/search?q=Auto%20ecole%20Abdallah%20Belarbi" target="_blank" rel="noopener noreferrer" style="color:#e2e8f0; text-decoration:none; margin-right:14px;"><i class="fa-brands fa-tiktok"></i> TikTok : Auto école Abdallah Belarbi</a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" style="color:#e2e8f0; text-decoration:none;"><i class="fa-brands fa-instagram" style="color:#f472b6;"></i> Instagram : Auto école Abdallah Belarbi</a>
+            </p>
+            <p>Rue Djebli Mohamed, Mont Plaisir, Mostaganem · Tél : 07 90 69 74 21</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Quick Action -->
+    <div class="mobile-quick-action">
+        <a href="tel:0790697421" class="btn-purple" style="font-size:0.9rem;">
+            <i class="fa-solid fa-phone"></i> Appeler
+        </a>
+        <a href="https://wa.me/213790697421?text=Bonjour%20Auto-école%20Belarbi%20Abdellah,%20je%20souhaite%20m'inscrire" target="_blank" style="background:#25d366; color:white; font-size:0.9rem;">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+    </div>
+
+    <script>
+        function toggleDocsBar() {
+            const wrap = document.getElementById('docsBarWrap');
+            const btn = document.getElementById('docsBarBtn');
+            const isOpen = wrap.classList.toggle('open');
+            btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        }
+
+        function toggleFormDocs() {
+            const box = document.getElementById('formDocsBox');
+            const btn = document.getElementById('formDocsBtn');
+            const isOpen = box.classList.toggle('open');
+            btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        }
+
+        function updateDocsCount() {
+            const checkboxes = document.querySelectorAll('input[name="dossierDoc"]');
+            const checkedCount = Array.from(checkboxes).filter(cb => cb.checked).length;
+            document.getElementById('docsCount').textContent = checkedCount;
+            const btn = document.querySelector('.docs-toggle-all');
+            btn.textContent = checkedCount === checkboxes.length ? 'Tout décocher' : 'Tout cocher';
+        }
+
+        function toggleAllDocs() {
+            const checkboxes = document.querySelectorAll('input[name="dossierDoc"]');
+            const allChecked = Array.from(checkboxes).every(cb => cb.checked);
+            checkboxes.forEach(cb => cb.checked = !allChecked);
+            updateDocsCount();
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const nom = document.getElementById('name').value.trim();
+            const tel = document.getElementById('phone').value.trim();
+            const pack = document.getElementById('formation').value;
+            const note = document.getElementById('message').value.trim();
+
+            if (!nom || tel.replace(/\s+/g, '').length < 9) {
+                return;
+            }
+
+            const selectedDocs = Array.from(document.querySelectorAll('input[name="dossierDoc"]:checked'))
+                .map(cb => cb.value);
+            const docsSummary = selectedDocs.length > 0
+                ? selectedDocs.join(', ')
+                : 'Aucun document encore coché';
+
+            let msg = `Bonjour Auto-école Belarbi Abdellah,%0AJe m'appelle: ${encodeURIComponent(nom)}%0AMon numéro: ${encodeURIComponent(tel)}%0AFormule: ${encodeURIComponent(pack)}%0ADocuments prêts (${selectedDocs.length}/6): ${encodeURIComponent(docsSummary)}`;
+            if(note !== "") {
+                msg += `%0AMessage: ${encodeURIComponent(note)}`;
+            }
+
+            const waUrl = `https://wa.me/213790697421?text=${msg}`;
+            const banner = document.getElementById('formConfirmBanner');
+            const waLink = document.getElementById('formConfirmWaLink');
+            waLink.href = waUrl;
+            banner.style.display = 'flex';
+
+            const a = document.createElement('a');
+            a.href = waUrl;
+            a.target = '_blank';
+            a.rel = 'noopener noreferrer';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+
+        // Animation de la vidéo d'introduction (Voiture + Nom Auto-école)
+        const INTRO_DURATION = 5800;
+        let introPlaying = true;
+        let introProgress = 0;
+        let introLastTime = null;
+        let introAutoExited = false;
+        let introActive = true;
+
+        function enterPlatform() {
+            const overlay = document.getElementById('introOverlay');
+            overlay.classList.add('hidden-fade');
+            introActive = false;
+            setTimeout(() => {
+                overlay.classList.add('removed');
+            }, 460);
+        }
+
+        function openIntroAgain() {
+            const overlay = document.getElementById('introOverlay');
+            overlay.classList.remove('removed');
+            requestAnimationFrame(() => overlay.classList.remove('hidden-fade'));
+            introActive = true;
+            replayIntro();
+        }
+
+        function toggleIntroPlay() {
+            introPlaying = !introPlaying;
+            if (introPlaying) introLastTime = performance.now();
+            const btn = document.getElementById('introPlayBtn');
+            btn.innerHTML = introPlaying
+                ? '<i class="fa-solid fa-pause"></i> Pause'
+                : '<i class="fa-solid fa-play"></i> Lecture';
+        }
+
+        function replayIntro() {
+            introProgress = 0;
+            introAutoExited = false;
+            introPlaying = true;
+            introLastTime = performance.now();
+            document.getElementById('introPlayBtn').innerHTML = '<i class="fa-solid fa-pause"></i> Pause';
+        }
+
+        (function initIntroVideo() {
+            const canvas = document.getElementById('introCanvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+
+            function draw(p, timeSec) {
+                const dpr = Math.min(window.devicePixelRatio || 1, 2);
+                const rect = canvas.getBoundingClientRect();
+                const w = Math.max(320, Math.floor(rect.width));
+                const h = Math.max(200, Math.floor(rect.height));
+                if (canvas.width !== Math.floor(w * dpr) || canvas.height !== Math.floor(h * dpr)) {
+                    canvas.width = Math.floor(w * dpr);
+                    canvas.height = Math.floor(h * dpr);
+                }
+
+                ctx.save();
+                ctx.scale(dpr, dpr);
+
+                const sky = ctx.createLinearGradient(0, 0, 0, h);
+                sky.addColorStop(0, '#05030a');
+                sky.addColorStop(0.55, '#120824');
+                sky.addColorStop(1, '#090611');
+                ctx.fillStyle = sky;
+                ctx.fillRect(0, 0, w, h);
+
+                const hy = h * 0.64;
+                const glow = ctx.createRadialGradient(w * 0.5, hy, 10, w * 0.5, hy, w * 0.55);
+                glow.addColorStop(0, 'rgba(168,85,247,0.38)');
+                glow.addColorStop(0.5, 'rgba(126,34,206,0.14)');
+                glow.addColorStop(1, 'rgba(9,6,17,0)');
+                ctx.fillStyle = glow;
+                ctx.fillRect(0, 0, w, h);
+
+                const road = ctx.createLinearGradient(0, hy, 0, h);
+                road.addColorStop(0, '#130b24');
+                road.addColorStop(1, '#050308');
+                ctx.fillStyle = road;
+                ctx.fillRect(0, hy, w, h - hy);
+
+                ctx.strokeStyle = 'rgba(192,132,252,0.45)';
+                ctx.lineWidth = 1.5;
+                ctx.beginPath();
+                ctx.moveTo(0, hy);
+                ctx.lineTo(w, hy);
+                ctx.stroke();
+
+                const laneY = hy + (h - hy) * 0.52;
+                const period = 104;
+                const off = (timeSec * 440) % period;
+                ctx.fillStyle = 'rgba(216,180,254,0.65)';
+                for (let x = -period + (period - off); x < w + period; x += period) {
+                    ctx.beginPath();
+                    ctx.roundRect(x, laneY - 2, 58, 4, 2);
+                    ctx.fill();
+                }
+
+                const easeOut = (t) => 1 - Math.pow(1 - t, 3);
+                const easeIn = (t) => t * t * t;
+                const scaleBase = Math.min(1.15, Math.max(0.62, w / 760));
+                let carX = w * 0.5;
+                if (p < 0.36) carX = -220 + (w * 0.5 + 220) * easeOut(p / 0.36);
+                else if (p > 0.86) carX = w * 0.5 + w * 0.68 * easeIn((p - 0.86) / 0.14);
+
+                ctx.save();
+                ctx.translate(carX, laneY - 8 + Math.sin(timeSec * 14) * 1.2);
+                ctx.scale(scaleBase, scaleBase);
+
+                const beam = ctx.createLinearGradient(118, -22, 340, 12);
+                beam.addColorStop(0, 'rgba(233,213,255,0.65)');
+                beam.addColorStop(1, 'rgba(168,85,247,0)');
+                ctx.fillStyle = beam;
+                ctx.beginPath();
+                ctx.moveTo(122, -26);
+                ctx.lineTo(360, -52);
+                ctx.lineTo(360, 24);
+                ctx.lineTo(120, -14);
+                ctx.closePath();
+                ctx.fill();
+
+                const bodyGrad = ctx.createLinearGradient(-120, -78, 125, 0);
+                bodyGrad.addColorStop(0, '#1e1338');
+                bodyGrad.addColorStop(0.5, '#3b1c73');
+                bodyGrad.addColorStop(1, '#0d0719');
+                ctx.fillStyle = bodyGrad;
+                ctx.strokeStyle = '#c084fc';
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.moveTo(-126, -12);
+                ctx.lineTo(-128, -32);
+                ctx.quadraticCurveTo(-125, -46, -104, -52);
+                ctx.lineTo(-68, -74);
+                ctx.quadraticCurveTo(-20, -82, 34, -74);
+                ctx.lineTo(74, -48);
+                ctx.quadraticCurveTo(116, -44, 128, -26);
+                ctx.quadraticCurveTo(132, -14, 122, -8);
+                ctx.lineTo(-118, -8);
+                ctx.closePath();
+                ctx.fill();
+                ctx.stroke();
+
+                ctx.fillStyle = '#ffffff';
+                ctx.beginPath();
+                ctx.roundRect(-24, -88, 48, 13, 4);
+                ctx.fill();
+                ctx.fillStyle = '#3b0764';
+                ctx.font = '800 7px Plus Jakarta Sans, sans-serif';
+                ctx.textAlign = 'center';
+                ctx.fillText('AUTO-ÉCOLE', 0, -79);
+
+                [-76, 78].forEach((wx) => {
+                    ctx.save();
+                    ctx.translate(wx, -8);
+                    ctx.fillStyle = '#0b0812';
+                    ctx.beginPath();
+                    ctx.arc(0, 0, 19, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.fillStyle = '#cbd5e1';
+                    ctx.beginPath();
+                    ctx.arc(0, 0, 11, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.rotate(timeSec * 15);
+                    ctx.strokeStyle = '#1e1b4b';
+                    ctx.lineWidth = 2;
+                    for (let s = 0; s < 5; s++) {
+                        const a = (s * Math.PI * 2) / 5;
+                        ctx.beginPath();
+                        ctx.moveTo(0, 0);
+                        ctx.lineTo(Math.cos(a) * 10, Math.sin(a) * 10);
+                        ctx.stroke();
+                    }
+                    ctx.restore();
+                });
+
+                ctx.restore();
+
+                const titleAlpha = Math.min(1, Math.max(0, (p - 0.14) / 0.25));
+                if (titleAlpha > 0) {
+                    ctx.save();
+                    ctx.globalAlpha = titleAlpha;
+                    ctx.textAlign = 'center';
+                    ctx.fillStyle = '#d8b4fe';
+                    ctx.font = `700 ${Math.round(Math.max(13, w * 0.018))}px Plus Jakarta Sans, sans-serif`;
+                    ctx.fillText('AUTO ÉCOLE', w * 0.5, h * 0.19);
+                    ctx.fillStyle = '#ffffff';
+                    ctx.font = `900 italic ${Math.round(Math.min(48, Math.max(24, w * 0.048)))}px Plus Jakarta Sans, sans-serif`;
+                    ctx.fillText('BELARBI ABDELLAH', w * 0.5, h * 0.28);
+                    ctx.fillStyle = '#c084fc';
+                    ctx.font = `600 ${Math.round(Math.max(12, w * 0.016))}px Plus Jakarta Sans, sans-serif`;
+                    ctx.fillText('Votre permis, notre priorité  ·  Mostaganem', w * 0.5, h * 0.355);
+                    ctx.restore();
+                }
+
+                ctx.restore();
+            }
+
+            function loop(now) {
+                if (introLastTime === null) introLastTime = now;
+                const dt = Math.min(50, now - introLastTime);
+                introLastTime = now;
+
+                if (introActive && introPlaying && introProgress < 1) {
+                    introProgress = Math.min(1, introProgress + dt / INTRO_DURATION);
+                    const fill = document.getElementById('introProgressFill');
+                    const timer = document.getElementById('introTimer');
+                    if (fill) fill.style.width = `${Math.round(introProgress * 100)}%`;
+                    if (timer) timer.textContent = `00:0${Math.min(6, Math.floor((introProgress * INTRO_DURATION) / 1000))} / 00:06`;
+
+                    if (introProgress >= 1 && !introAutoExited) {
+                        introAutoExited = true;
+                        setTimeout(enterPlatform, 550);
+                    }
+                }
+
+                if (introActive) {
+                    draw(introProgress, now / 1000);
+                }
+                requestAnimationFrame(loop);
+            }
+            requestAnimationFrame(loop);
+        })();
+    </script>
+</body>
+</html>
